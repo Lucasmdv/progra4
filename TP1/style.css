@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    background: rgb(129, 194, 129);
+}
+
+.formulario{
+    width: 1000px;
+    margin: 20vh auto;
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario form{
+    width: 500px;
+    border-radius: 17px;
+    border: 2px solid red;
+    padding: 50px;
+    background-color: rgb(247, 207, 155);
+    flex-direction: column;
+}
+
+.formulario nav{
+    display: block;
+}
+
+.formulario input,
+.formulario button {
+    margin-bottom: 10px;
+    padding: 3px;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.formulario input{
+    background: mintcream;
+}
+
+.formulario label{
+    font-weight: bold;
+}
+
+.formulario legend{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.navbar{
+    padding: 1vh 10vw;
+    width: 100%;
+    box-sizing: border-box;
+    color: aliceblue;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(72, 8, 133);
+}
+  
+.navbar ul {
+    list-style:none;
+    margin: 0;
+    padding: 1vw;
+    display: flex;
+}
+  
+.navbar li {
+    margin: 20px;
+    margin-right: 0;
+}
+  
+.navbar a {
+    border: 2px solid red;   
+    padding: 5px 10px;        
+    border-radius: 50px;  
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+    background: rgb(247, 207, 155);
+    font-weight: bold;
+}
+
+.img1 {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1 img {
+    margin: auto;
+    width: 40vw;
+    height: auto;
+    text-align: left;
+}
+
+.img1 figcaption {
+    margin-top: 0.5em;
+    font-size: 2em;
+}
+
+.footer{
+    margin: 0;
+    padding: 1vh 3vw;
+    background-color: rgb(77, 76, 76);
+    color: rgb(164, 168, 172);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer a{
+    color: rgb(164, 168, 172);
+}
