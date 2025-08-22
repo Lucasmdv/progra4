@@ -6,35 +6,18 @@
 body{
     width: 100vw;
     height: auto;
-    border: 1px solid red;
 }
 
-main{
-    min-height: 100vh;
-    width: 90vw;
-    margin: 10vh 5vw;
-    box-sizing: border-box;
-    border: 2px solid red;
-    display:flex;
-    justify-content: center;
-}
-
-.bienvenida{
-    width: 100%;
-    height: 33.3%;
-    padding: 50px;
-    border: 2px solid red;
+.body-container{
+  display: grid;
+  grid-template-areas: "nav nav nav"
+                        "main main main"
+                        "footer footer footer"
 }
 
 header{
-    padding: 5vh 5vw;
-    width: 100vw;
-    max-height: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    grid-area: nav;
     background-color: rgb(143, 165, 45);
-    box-sizing: border-box;
 }
 
 header div{
@@ -73,7 +56,19 @@ header div{
     font-weight: bold;
 }
 
+main{
+    grid-area: main;
+}
+
+.bienvenida{
+    width: 100%;
+    height: 33.3%;
+    padding: 50px;
+    border: 2px solid red;
+}
+
 footer{
+    grid-area: footer;
     padding: 5vh 5vw;
     width: 100vw;
     height: auto;
