@@ -27,11 +27,50 @@
             if (ultimo) {
                 document.getElementById("lista").removeChild(ultimo);
             }
+            // let lista = document.getElementById('lista');
+            // if (lista.lastElementChild) {
+            //     lista.removeChild(lista.lastElementChild);
+            // }
         })
 
 // 4- Formulario interactivo:
 // Validar que los campos no estén vacíos al hacer clic en “Enviar”.
 
+        let email = document.getElementById("email")
+        let nombre = document.getElementById("nombre")
+        let submit = document.getElementById("enviar")
+        let formulario = document.getElementById("formulario")
+
+        formulario.addEventListener("submit", (evento) => {
+            evento.preventDefault();
+            if(email.value.length == 0  || nombre.value.length == 0){
+                alert("TODOS LOS CAMPOS DEBEN ESTAR COMPLETOS");
+            }else if(!esEmailValido(email.value)){
+                alert("El mail no tiene un formato valido")
+            }
+            agregarALista(nombre.value,email.value)
+            borrarCampos()
+        })
+
+        function esEmailValido(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
 // Mostrar los datos ingresados en la lista <ul>.
 
+        const listaResultados = document.getElementById('listaResultados');
+
+        function agregarALista(nombre,email) {
+            const li = document.createElement('li');
+            li.textContent = `Nombre: ${nombre}     |     Email: ${email}`;
+            listaResultados.appendChild(li);
+        }
+        
+
 // Limpiar los campos después de enviar.
+
+        function borrarCampos(){
+            formulario.reset();
+        }
+        
