@@ -94,4 +94,42 @@
 
 // 7 - Crear 3 funciones que devuelvan promesas con un setTimeout distinto (por ejemplo: 1s, 2s y 3s). Llamarlas en una función async usando await para ejecutarlas en orden y mostrar los resultados.
 
+    function funcion1sec(){
+        return new Promise((resolve, reject) => {
+            setTimeout(() =>{
+            resolve("paso 1 segundo")
+        },1000)
+        })
+    }
+
+    function funcion2sec(){
+        return new Promise((resolve, reject) => {
+            setTimeout(() =>{
+            resolve("pasaron 2 segundos")
+        },2000)
+        })
+        
+    }
+
+    function funcion3sec(){
+        return new Promise((resolve, reject) => {
+            setTimeout(() =>{
+            resolve("pasaron 3 segundos")
+        },3000)
+        })
+    }
+
+    async function ej7() {
+        try {
+            console.log(await funcion1sec())
+            console.log(await funcion2sec());
+            console.log(await funcion3sec());
+        } catch (error) {
+            console.log(error);
+        }
+    }
 // 8 - Tomar las 3 funciones del ejercicio anterior, pero ahora ejecutarlas con Promise.all (investigar). Mostrar todos los resultados juntos cuando se resuelvan.
+
+
+    Promise.all([funcion1sec(),funcion2sec(),funcion3sec()]) //Las resuelve todas al mismo tiempo, si una falla solamente se mostrara el fallo y de cual, no importa si resolvio alguna anterior
+    .then(res => console.log(res))
