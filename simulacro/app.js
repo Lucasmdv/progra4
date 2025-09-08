@@ -32,7 +32,7 @@ async function postFunction() {
         let response = await fetch(url, {
             method: "POST",
             headers: {
-                "Content-Type": "aplication/json"
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 nombre: postNombre.value,
@@ -53,7 +53,7 @@ async function putFunction() {
         let response = await fetch(url + "/" + putId.value, {
             method: "PUT",
             headers: {
-                "Content-Type": "aplication/json"
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 id: putId.value,
@@ -62,11 +62,14 @@ async function putFunction() {
                 nivelPoder: Number(putPoder.value)
             })
         })
-        let data =response.json()
-        pPost.textContent = "post elegido ha sido reemplazado por los siguientes datos: "+JSON.stringify(data,null,2)
+        if (!response.ok) {
+            throw new Error("en el servidor: " + response.status);
+        }
+        let data =await response.json()
+        pPut.textContent = "post elegido ha sido reemplazado por los siguientes datos: "+JSON.stringify(data,null,2)
         console.log(data)
     } catch (error) {
-        pPost.textContent = "Error: " + error
+        pPut.textContent = error
     }
 }
 
@@ -75,6 +78,5 @@ async function deleteFunction() {
     let response = fetch(url + "/" + deleteId.value, {
         method: "DELETE"
     })
-
-    pDelete = response.ok ? "Post: " + deleteId.value + " eliminado." : "Error al eliminar el post"
+    pDelete.textContent = response.ok ? "Post: " + deleteId.value + " eliminado." : "Error al eliminar el post"
 }
