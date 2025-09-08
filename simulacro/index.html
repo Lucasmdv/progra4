@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulacro extraterrestre</title>
+    <title>Simulacro Parcial-extraterrestre</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div>
-        <h2>GET</h2>
-        <input type="text" placeholder="ID del extraterrestre" id="getId">
-        <input type="button" value="Obtener"  id="getBtn">
-        <p id="getText" class="getText"></p>
+    <header>
+        <h1 class="titulo" id="titulo">Extraterrestres</h1>
+    </header>
 
-        <h2>POST</h2>
-        <input type="text" placeholder="nombre" id="postNombre">
-        <input type="text" placeholder="planeta" id="postPlaneta">
-        <input type="number" placeholder="cantidad de poder" id="postPoder">
-        <input type="button" value="Cargar" onclick="postFunction()">
-        <p class="postText" id="postText"></p>
+    <main>
+        <ul id="lista-et" class="lista-et">
+            <h2>👽 Conocidos</h2>
 
-        <h2>PUT</h2>
-        <input type="text" placeholder="ID del post a Reemplazar" id="putId">
-        <input type="text" placeholder="nombre" id="putNombre">
-        <input type="text" placeholder="planeta" id="putPlaneta">
-        <input type="number" placeholder="cantidad de poder" id="putPoder">
-        <input type="button" value="Reemplazar" onclick="putFunction()">
-        <p class="putText" id="putText"></p>
+        </ul>
 
-        <h2>DELETE</h2>
-        <input type="text" placeholder="ID del extraterrestre" id="deleteId">
-        <input type="button" value="Borrar" onclick="deleteFunction()">
-        <p class="deleteText" id="deleteText"></p>
-    </div>
+        <form id="postForm" class="postForm">
+            <h2>POST</h2>
+            <input type="text" placeholder="nombre" id="postNombre">
+            <input type="text" placeholder="planeta" id="postPlaneta">
+            <input type="number" placeholder="cantidad de poder" id="postPoder">
+            <input type="button" value="Cargar" id="postBtn" class="postBtn">
+            <p class="postText" id="postText"></p>
+        </form>
+
+        <form id="putForm" class="putForm">
+            <h2>PUT</h2>
+            <input type="text" placeholder="ID del post a Reemplazar" id="putId">
+            <input type="text" placeholder="nombre" id="putNombre">
+            <input type="text" placeholder="planeta" id="putPlaneta">
+            <input type="number" placeholder="cantidad de poder" id="putPoder">
+            <input type="button" value="Reemplazar" id="putBtn" class="putBtn">
+            <p class="putText" id="putText"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Lucas del Valle. Todos los derechos reservados</p>
+    </footer>
+
     <script src="app.js"></script>
 </body>
+
 </html>

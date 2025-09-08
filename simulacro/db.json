@@ -23,6 +23,12 @@
       "nombre": "Lionel Messi",
       "planeta": "Tierra",
       "nivelPoder": 100
+    },
+    {
+      "id": "7a8d",
+      "nombre": "Marcos",
+      "planeta": "Los Charcos",
+      "nivelPoder": 700
     }
   ]
 }
