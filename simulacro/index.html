@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulacro extraterrestre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <h2>GET</h2>
+        <input type="text" placeholder="ID del extraterrestre" id="getId">
+        <input type="button" value="Obtener"  id="getBtn">
+        <p id="getText" class="getText"></p>
+
+        <h2>POST</h2>
+        <input type="text" placeholder="nombre" id="postNombre">
+        <input type="text" placeholder="planeta" id="postPlaneta">
+        <input type="number" placeholder="cantidad de poder" id="postPoder">
+        <input type="button" value="Cargar" onclick="postFunction()">
+        <p class="postText" id="postText"></p>
+
+        <h2>PUT</h2>
+        <input type="number" placeholder="ID del post a Reemplazar" id="putId">
+        <input type="text" placeholder="nombre" id="putNombre">
+        <input type="text" placeholder="planeta" id="putPlaneta">
+        <input type="number" placeholder="cantidad de poder" id="putPoder">
+        <input type="button" value="Reemplazar" onclick="putFunction()">
+        <p class="putText" id="putText"></p>
+
+        <h2>DELETE</h2>
+        <input type="text" placeholder="ID del extraterrestre" id="deleteId">
+        <input type="button" value="Borrar" onclick="deleteFunction()">
+        <p class="deleteText" id="deleteText"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
