@@ -9,37 +9,39 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <h1 class="titulo" id="titulo">Extraterrestres</h1>
     </header>
 
-    <main>
+    <main class="main">
         <ul id="lista-et" class="lista-et">
             <h2>👽 Conocidos</h2>
 
         </ul>
 
-        <form id="postForm" class="postForm">
-            <h2>POST</h2>
-            <input type="text" placeholder="nombre" id="postNombre">
-            <input type="text" placeholder="planeta" id="postPlaneta">
-            <input type="number" placeholder="cantidad de poder" id="postPoder">
-            <input type="button" value="Cargar" id="postBtn" class="postBtn">
-            <p class="postText" id="postText"></p>
-        </form>
+        <div class="forms">
+            <form id="postForm" class="postForm">
+                <h2>POST</h2>
+                <input type="text" placeholder="nombre" id="postNombre">
+                <input type="text" placeholder="planeta" id="postPlaneta">
+                <input type="number" placeholder="cantidad de poder" id="postPoder">
+                <input type="button" value="Cargar" id="postBtn" class="postBtn">
+                <p class="postText" id="postText"></p>
+            </form>
 
-        <form id="putForm" class="putForm">
-            <h2>PUT</h2>
-            <input type="text" placeholder="ID del post a Reemplazar" id="putId">
-            <input type="text" placeholder="nombre" id="putNombre">
-            <input type="text" placeholder="planeta" id="putPlaneta">
-            <input type="number" placeholder="cantidad de poder" id="putPoder">
-            <input type="button" value="Reemplazar" id="putBtn" class="putBtn">
-            <p class="putText" id="putText"></p>
-        </form>
+            <form id="putForm" class="putForm">
+                <h2>PUT</h2>
+                <input type="text" placeholder="ID del post a Reemplazar" id="putId">
+                <input type="text" placeholder="nombre" id="putNombre">
+                <input type="text" placeholder="planeta" id="putPlaneta">
+                <input type="number" placeholder="cantidad de poder" id="putPoder">
+                <input type="button" value="Reemplazar" id="putBtn" class="putBtn">
+                <p class="putText" id="putText"></p>
+            </form>
+        </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>Lucas del Valle. Todos los derechos reservados</p>
     </footer>
 
