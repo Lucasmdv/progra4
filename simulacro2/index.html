@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dioses Griegos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo" class="titulo">Dioses de la antigua Grecia</h1>
+    </header>
+    <main>
+        <section id="getList" class="getList">
+            <h2>Actualmente cargados</h2>
+            <ul id="listaDioses" class="listaDioses">
+
+            </ul>
+            <section id="filtros" class="filtros">
+                <label for="nombreYdominio">Unicamente nombre y dominio  </label>
+                <input type="checkbox" id="nombreYdominio" class="nombreYdominio">
+                <label for="atributoEsp">  ..o por  </label>
+                <input type="text" id="atributoEsp" class="atributoEsp" placeholder="atributo especifico..">
+            </section>
+
+        </section>
+        <section id="forms" class="forms">
+            <form id="postForm" class="postForm">
+                <h2>Agrega un dios</h2>
+                <input type="text" placeholder="Nombre" id="postNombre" class="postNombre" required>
+                <input type="text" placeholder="Dominio" id="postDominio" class="postDominio" required>
+                <input type="text" placeholder="Simbolo" class="postSimbolo" id="postSimbolo" required>
+                <input type="number" placeholder="Poder" id="postPoder" class="postPoder" required>
+                <input type="text" placeholder="Ciudad" id="postCiudad" class="postCiudad" required>
+                <button type="button" id="addBtn" class="addBtn">Agregar</button>
+            </form>
+            <form id="putForm" class="putForm">
+                <h2>Edita un dios existente</h2>
+                <input type="text" placeholder="Nombre" id="putNombre" class="putNombre" disabled required>
+                <input type="text" placeholder="Dominio" id="putDominio" class="putDominio" disabled required>
+                <input type="text" placeholder="Simbolo" class="putSimbolo" id="putSimbolo" disabled required>
+                <input type="number" placeholder="Poder" id="putPoder" class="putPoder" disabled required>
+                <input type="text" placeholder="Ciudad" id="putCiudad" class="putCiudad" disabled required>
+                <button type="button" id="editBtn" class="editBtn" disabled>Listo</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
