@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+header{
+    margin: 3vh 5vw
+
+}
+
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+ul{
+    display: flex;
+    gap: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited{
+    color: blue;
+}
