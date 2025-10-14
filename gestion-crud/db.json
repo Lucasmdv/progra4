@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "name": "Laptop",
+      "price": 1200,
+      "stock": 17,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Smartphone",
+      "stock": 30,
+      "price": 800
+    },
+    {
+      "id": "3",
+      "name": "Headphones",
+      "stock": 50,
+      "price": 150
+    },
+    {
+      "id": "4",
+      "name": "Monitor",
+      "stock": 20,
+      "price": 300
+    }
+  ]
+}

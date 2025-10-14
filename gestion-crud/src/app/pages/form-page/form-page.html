@@ -1,0 +1,39 @@
+<main>
+    <form [formGroup]="pForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+            <label for="name">Nombre: </label>
+            <input type="text" name="name" formControlName="name">
+        </fieldset>
+        @if (pForm.controls["name"].invalid && pForm.controls["name"].touched) {
+            <p class="error">El Nombre no puede estar vacio</p>
+        }
+
+        <fieldset>
+            <label for="price">Precio: </label>
+            <input type="number" name="price" formControlName="price">
+        </fieldset>
+        @if (pForm.controls["price"].hasError("min") && pForm.controls["price"].touched) {
+            <p class="error">El precio no puede ser menor a 0</p>
+        }
+        @if (pForm.controls["price"].hasError('required') && pForm.controls["price"].touched) {
+        <p class="error">El precio es obligatorio</p>
+        }
+
+        <fieldset>
+            <label for="stock">Stock: </label>
+            <input type="number" name="stock" formControlName="stock">
+        </fieldset>
+        @if (pForm.controls["stock"].hasError("min") && pForm.controls["stock"].touched) {
+        <p class="error">El stock no puede ser menor a 0</p>
+        }
+        @if (pForm.controls["stock"].hasError('required') && pForm.controls["stock"].touched) {
+        <p class="error">El stock es obligatorio</p>
+        }
+        @if (pForm.controls["stock"].hasError("minLength") && pForm.controls["stock"].touched){
+        <p class="error">El stock es mayor a 9</p>
+        }
+
+
+        <button [disabled]="pForm.invalid">Enviar</button>
+    </form>
+</main>

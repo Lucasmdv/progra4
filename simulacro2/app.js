@@ -13,21 +13,28 @@ async function getFunction() {
     }
 }
 
+function listaFiltrada(atributo,datos){
+    let lista = document.getElementById("listaDioses")
+    lista.innerHTML = ""
+    let atribMinuscula = atributo.toLowerCase()
+        datos.forEach(element => {
+            let li = document.createElement("li");
+            if (element.hasOwnProperty(atribMinuscula)) {
+                li.textContent = atributo.charAt(0).toUpperCase() + atributo.slice(1) + ": " + element[atribMinuscula];
+            } else {
+                li.textContent = "El atributo '" + atributo + "' no existe en este registro.";
+            }
+            lista.appendChild(li);
+        })
+}
+
 async function agregarALista(atributo) {
     let datosLista = await getFunction()
     let lista = document.getElementById("listaDioses")
     lista.innerHTML = ""
 
     if (atributo && atributo.trim() !== "") {
-        datosLista.forEach(element => {
-            let li = document.createElement("li");
-            if (element.hasOwnProperty(atributo)) {
-                li.textContent = atributo.charAt(0).toUpperCase() + atributo.slice(1) + ": " + element[atributo];
-            } else {
-                li.textContent = "El atributo '" + atributo + "' no existe en este registro.";
-            }
-            lista.appendChild(li);
-        });
+        listaFiltrada(atributo,datosLista)
         return;
     }
 

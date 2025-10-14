@@ -1,0 +1,11 @@
+footer{
+    display: flex;
+    background-color: black;
+    align-content: center;
+    justify-content: center;
+}
+
+h6{
+    color: aliceblue;
+    padding: 20px;
+}
