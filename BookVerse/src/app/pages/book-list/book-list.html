@@ -1,0 +1,19 @@
+<main>
+
+    <ul>
+        @for (book of bService.books; track $index) {
+        <li><a [routerLink]="['/book/show',book.id]">
+                <h3>Titulo: {{book.title}}</h3>
+                <h4>Autor: {{book.autor}}</h4>
+                <h4>Año de publicacion: {{book.anioPublicacion}}</h4>
+                <h4>Genero: {{book.genero}}</h4>
+            </a>
+            <button (click)="editarLibro(book)">Editar</button>
+            <button (click)="eliminarLibro(book.id)">Eliminar</button>
+        </li>
+        }
+    </ul>
+
+
+
+</main>

@@ -1,0 +1,60 @@
+{
+  "books": [
+    {
+      "title": "Cien años de soledad",
+      "autor": "carlitos",
+      "anioPublicacion": 1967,
+      "genero": "Fantastico",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "title": "Rayuela",
+      "anioPublicacion": 1963,
+      "autor": "Julio Cortázar",
+      "genero": "Romance"
+    },
+    {
+      "id": "3",
+      "title": "El túnel",
+      "anioPublicacion": 1948,
+      "autor": "Ernesto Sabato",
+      "genero": "Misterio"
+    },
+    {
+      "id": "4",
+      "title": "Don Quijote de la Mancha",
+      "anioPublicacion": 1605,
+      "autor": "Miguel de Cervantes",
+      "genero": "Fantastico"
+    },
+    {
+      "id": "5",
+      "title": "Pedro Páramo",
+      "anioPublicacion": 1955,
+      "autor": "Juan Rulfo",
+      "genero": "Terror"
+    },
+    {
+      "id": "6",
+      "title": "La sombra del viento",
+      "anioPublicacion": 2001,
+      "autor": "Carlos Ruiz Zafón",
+      "genero": "Misterio"
+    }
+  ],
+  "authors": [
+    {
+      "id": "1",
+      "name": "Gabriel García Márquez"
+    },
+    {
+      "id": "2",
+      "name": "Julio Cortázar"
+    },
+    {
+      "id": "3",
+      "name": "Ernesto Sabato"
+    }
+  ]
+}

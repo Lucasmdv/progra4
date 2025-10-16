@@ -1,0 +1,43 @@
+<main>
+
+    <form [formGroup]="booksForm" (ngSubmit)="onSubmit()">
+
+        <fieldset>
+            <label for="title">Titulo: </label>
+            <input type="text" name="title" id="title" formControlName="title">
+        </fieldset>
+
+        <fieldset>
+            <label for="autor">Autor: </label>
+            <input type="text" name="autor" id="autor" formControlName="autor">
+        </fieldset>
+
+        <fieldset>
+            <label for="anioPublicacion">Año de publicacion: </label>
+            <input type="number" name="anioPublicacion" id="anioPublicacion" formControlName="anioPublicacion">
+        </fieldset>
+
+        <fieldset>
+            <label for="genero">Genero: </label>
+            <select name="genero" id="genero" formControlName="genero">
+                <option value="Terror" defaultSelected>Terror</option>
+                <option value="Romance">Romance</option>
+                <option value="Ciencia Ficcion">Ciencia Ficcion</option>
+                <option value="Misterio">Misterio</option>
+                <option value="Fantastico">Fantastico</option>
+            </select>
+        </fieldset>
+
+
+        <button [disabled]="booksForm.invalid">Enviar</button>
+
+    </form>
+
+
+
+
+
+
+
+
+</main>
